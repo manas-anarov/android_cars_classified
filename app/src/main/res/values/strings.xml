@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ArabaKg</string>
+
+
+    <string name="toast_load">Загружаю</string>
+
+    <string name="create_title">Заголовок</string>
+    <string name="create_text">Описание</string>
+    <string name="create_price">Цена</string>
+    <string name="create_year">Год</string>
+    <string name="create_currency">Валюта</string>
+    <string name="create_city">Регион</string>
+    <string name="create_brand">Марка</string>
+
+
+    <string name="create_save">Сохранить</string>
+
+
+
+</resources>
