@@ -12,7 +12,9 @@ public class SharedDataGetSet {
         SharedPreferences preferences = context.getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         String token_in_func = preferences.getString("token","");
 
-        return token_in_func;
+        String token_result = "Token " + token_in_func;
+
+        return token_result;
     }
 
 
@@ -86,22 +88,5 @@ public class SharedDataGetSet {
         return s;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

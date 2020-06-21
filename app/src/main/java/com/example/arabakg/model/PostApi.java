@@ -26,11 +26,6 @@ public interface PostApi {
     String API_URL = root + "api/v1/";
 
 
-
-
-
-
-
     @POST("add/")
     Call<CarModel> addPost(@Header("Authorization")  String authToken, @Body CarModel gruzModel);
 
@@ -39,48 +34,31 @@ public interface PostApi {
     Call<List<BrandModel>> getBrandList();
 
 
-    @Multipart
-    @POST("accounts/edit/doctor/")
-    Call<ResponseBody>  createPost1 (
-            @Header("Authorization")  String authToken,
-            @Part("user.username") RequestBody username,
-            @Part("user.first_name") RequestBody first_name,
-            @Part("user.last_name") RequestBody last_name,
-            @Part("user.email") RequestBody email,
-
-            @Part("tel") RequestBody tel,
-            @Part("description") RequestBody desc,
-            @Part("category") RequestBody cat,
-            @Part("whatsapp") RequestBody whatsapp,
-            @Part("gender") RequestBody gender
-    );
-
 
     @Multipart
     @POST("reklama/add/car/")
     Call<ResponseBody>  createPost (
             @Header("Authorization")  String authToken,
-            @Part("item.area") RequestBody area,
-            @Part("item.group") RequestBody group,
-            @Part("item.title") RequestBody title,
-            @Part("item.description") RequestBody description,
-            @Part("item.price") RequestBody price,
+            @Part("item.area") Integer area,
+            @Part("item.group") Integer group,
+            @Part("item.title") String  title,
+            @Part("item.description") String description,
+            @Part("item.price") Integer price,
             @Part("item.is_active") Boolean is_active,
 
 
-            @Part("item_type") RequestBody item_type,
-            @Part("year") RequestBody year,
-            @Part("car_type") RequestBody car_type
+            @Part("item_type") Integer item_type,
+            @Part("year") Integer year,
+            @Part("car_type") Integer car_type
 
     );
 
 
+    @POST("rest-auth/login/")
+    Call<User> login(@Body Login login);
 
 
 
-//    @POST("api-token-auth/")
-//    Call<User> login(@Body Login login);
-//
 //    @GET("profile/")
 //    Call<User> getProfile(@Header("Authorization")  String authToken);
 //

@@ -8,6 +8,10 @@ public class User {
     private String email;
     private String username;
     private String token;
+
+
+
+    private String key;
     private String password;
     private String first_name;
     private String name;
@@ -18,6 +22,7 @@ public class User {
                     String email,
                     String username,
                     String token,
+                    String key,
                     String password,
                     String first_name,
                     String name
@@ -26,6 +31,7 @@ public class User {
         this.email = email;
         this.username = username;
         this.token = token;
+        this.key = key;
         this.password = password;
         this.first_name = first_name;
         this.name = name;
@@ -66,6 +72,13 @@ public class User {
         this.token = token;
     }
 
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
     public String getPassword(){
         return password;

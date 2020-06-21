@@ -80,8 +80,6 @@ public class Create extends Fragment implements View.OnClickListener {
 
 
 
-
-
         e_title = (EditText) rootView.findViewById(R.id.title);
         e_description = (EditText) rootView.findViewById(R.id.description);
         e_price = (EditText) rootView.findViewById(R.id.price);
@@ -110,22 +108,13 @@ public class Create extends Fragment implements View.OnClickListener {
         ListCity.add(new CityModel(6,7, "Баткен"));
 
 
-
         listBrand.add(new BrandModel(0,"Все"));
-        listBrand.add(new BrandModel(1,"Все"));
-        listBrand.add(new BrandModel(2,"Хонда"));
-
-
-
-
+        listBrand.add(new BrandModel(1,"Honda"));
+        listBrand.add(new BrandModel(2,"Toyota"));
 
 
         FillSpinnerCity();
         FillSpinnerBrand();
-
-
-
-
 
 
         return rootView;
@@ -173,39 +162,23 @@ public class Create extends Fragment implements View.OnClickListener {
 
 
 
-        RequestBody rb_ed_area = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(choice_city));
-        RequestBody rb_ed_group = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(1));
-        RequestBody rb_ed_title = RequestBody.create(MediaType.parse("text/plain"), add_title);
-        RequestBody rb_ed_description = RequestBody.create(MediaType.parse("text/plain"), add_description);
-        RequestBody rb_ed_price = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(add_price));
-
-
-//        RequestBody rb_ed_active = RequestBody.create(MediaType.parse("text/plain"), "True");
-
-        RequestBody rb_ed_item_type = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(1));
-        RequestBody rb_ed_year = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(add_year));
-        RequestBody rb_ed_car_type = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(choice_brand));
-
-
-
-
         postApi = Client.getClient().create(PostApi.class);
         String token_ex_ap = SharedDataGetSet.getMySavedToken(getActivity());
 
 
         Call<ResponseBody> call = postApi.createPost(
                 token_ex_ap,
-                rb_ed_area,
-                rb_ed_group,
-                rb_ed_title,
-                rb_ed_description,
-                rb_ed_price,
+                choice_city,
+                1,
+                add_title,
+                add_description,
+                add_price,
                 true,
-
-                rb_ed_item_type,
-                rb_ed_year,
-                rb_ed_car_type
+                2,
+                add_year,
+                choice_brand
         );
+
 
 
         call.enqueue(new Callback<ResponseBody>() {

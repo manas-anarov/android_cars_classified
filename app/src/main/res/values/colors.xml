@@ -3,4 +3,25 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+
+
+
+
+
+
+
+
+
+    <color name="colorBlueMy">#1DA1F2</color>
+    <color name="colorGreenMy">#17BF63</color>
+    <color name="colorWhiteMy">#fff</color>
+
+    <color name="colorBlackMy">#000</color>
+
+    <color name="colorLightBlueMy">#5BC0FE</color>
+
+    <color name="colorBackgroundMy">#E5E5E5</color>
+
+    <color name="colorRedMy">#FA1D1D</color>
 </resources>

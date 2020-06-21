@@ -17,4 +17,21 @@
 
 
 
+    //страница логин
+    <string name="log_doctor_empty">Заполните пустые поля</string>
+    <string name="error_log_doctor_size">Поля должны содержать больше 3 симолов, Password должен содержать только латинские символы.</string>
+
+
+    <string name="t_login_sucсess">Вы успешно зашли в свой профиль</string>
+
+    <string name="toast_log_network">Ошибка</string>
+    <string name="toast_log_network_fail">Ошибка сети</string>
+
+    <string name="hint_login_username">Login</string>
+    <string name="hint_login_password">Пароль</string>
+    <string name="t_login_login">ВОЙТИ</string>
+    <string name="t_login_register">РЕГИСТРАЦИЯ</string>
+
+
+
 </resources>
